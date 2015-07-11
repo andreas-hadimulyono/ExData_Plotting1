@@ -1,4 +1,4 @@
-generate_plot_1 <- function(){
+generate_plot_2 <- function(){
     ## read the text file
     original_data <- read.csv("household_power_consumption.txt", header = TRUE, sep = ";")
     
@@ -11,12 +11,12 @@ generate_plot_1 <- function(){
     filtered_data$Global_active_power <- as.numeric(as.character(filtered_data$Global_active_power))
     
     ## plot
-    hist(filtered_data$Global_active_power, 
-         xlab="Global Active Power (kilowatts)", 
-         ylab="Frequency", 
-         main="Global Active Power", 
-         col="red")
+    plot(filtered_data$Time, 
+         filtered_data$Global_active_power, 
+         type="l", 
+         ylab="Global Active Power (kilowatts)", 
+         xlab="")
     
-    dev.copy(png, "plot1.png")
+    dev.copy(png, "plot2.png")
     dev.off()
 }
