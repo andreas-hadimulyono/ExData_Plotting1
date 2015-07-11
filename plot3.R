@@ -32,7 +32,8 @@ generate_plot_3 <- function(){
            lwd=1, 
            col=c("black", "red", "blue"), 
            legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-           pt.cex = 0.5)
+           pt.cex = 0.3,
+           cex = 1)
     
     dev.copy(png, "plot3.png")
     dev.off()
